@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Card from './components/card'
 
 function App() {
 
@@ -62,10 +63,9 @@ function App() {
             {renderButtons()}
           </ul>
         </div>
-        <div className="card">
-          <h3 className="card-title">{isActive ? isActive.title : ""}</h3>
-          <p>{isActive ? isActive.description : "Nessun linguaggio selezionato"}</p>
-        </div>
+        <Card
+          isActive={isActive}
+        />
       </div>
     </>
   )

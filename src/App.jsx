@@ -42,7 +42,7 @@ function App() {
   function renderButtons() {
     return languages.map(language => (
       <li
-        className='button'
+        className={`button ${isActive && isActive.id === language.id ? 'active' : ''}`}
         onClick={() => setIsActive(language)}
         key={language.id}
       >

@@ -37,7 +37,7 @@ function App() {
     }
   ];
 
-  const [isActive, setIsActive] = useState(languages[0]);
+  const [isActive, setIsActive] = useState(null);
 
   function renderButtons() {
     return languages.map(language => (
@@ -63,8 +63,8 @@ function App() {
           </ul>
         </div>
         <div className="card">
-          <h3 className="card-title">{isActive.title}</h3>
-          <p>{isActive.description}</p>
+          <h3 className="card-title">{isActive ? isActive.title : ""}</h3>
+          <p>{isActive ? isActive.description : "Nessun linguaggio selezionato"}</p>
         </div>
       </div>
     </>
